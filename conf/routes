@@ -1,0 +1,17 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /	                                        controllers.Application.index
+
+#Attachments
+GET     /attachment/:id                             controllers.AttachmentsControl.getAttachment(id)
+DELETE  /attachment/:id                             controllers.AttachmentsControl.deleteAttachment(id)
+GET     /attachment/:id/content                     controllers.AttachmentsControl.getAttachmentContent(id)
+GET     /attachment                                 controllers.AttachmentsControl.getAttachments()
+POST    /attachment                                 controllers.AttachmentsControl.postAttachment()
+
+#Users
+POST    /user                                       controllers.UsersControl.postUser()
+GET     /user/:id                                   controllers.UsersControl.getUser(id)
