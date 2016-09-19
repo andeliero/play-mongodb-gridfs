@@ -1,4 +1,4 @@
-name := "wilier-conf-ws"
+name := "play-mongodb-gridfs"
 version := "1.0.0"
 
 scalaVersion := "2.11.7"
@@ -10,12 +10,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 javaOptions in Test += "-Dconfig.file=conf/test.conf"
 
-
 libraryDependencies += specs2
 libraryDependencies += ws
-
-//handling authentications and roles
-libraryDependencies +=  "be.objectify" %% "deadbolt-scala" % "2.5.0"
 
 // Mongodb scala driver
 libraryDependencies += "org.mongodb" % "casbah-core_2.11" % "3.1.1"
